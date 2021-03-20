@@ -6,4 +6,8 @@
 <h3><%= @building.rent_per_floor %></h3>
 <h3><%= @building.number_of_floors %></h3>
 
-<%= link_to 'INDEX', buildings_path%>
+<%=@building.companies.each do |company|%>
+    <p><%=company.offices.name%></p>
+    <%end%>
+
+<%= link_to 'Index', buildings_path%>
